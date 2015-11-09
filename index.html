@@ -1,39 +1,50 @@
 <!DOCTYPE html>
-<html>
+
+<!-- define angular app -->
+<html ng-app="scotchApp">
 
 <head>
-	<title>Page Title</title>
-	<link rel="stylesheet" href="style.css">
+  <!-- SCROLLS -->
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+
+  <!-- SPELLS -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+  <script src="script.js"></script>
 </head>
 
+<!-- define angular controller -->
+<body ng-controller="mainController">
 
-	<body>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">Angular Routing Example</a>
+      </div>
 
-		<div id="header">
-			<h1>City Gallery</h1>
-		</div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="#about"><i class="fa fa-shield"></i> About</a></li>
+        <li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-		<div id="nav">
-			London<br>
-			Paris<br>
-			Tokyo<br>
-		</div>
-
-		<div id="section">
-			<h1>London</h1>
-			<p>
-			London is the capital city of England. It is the most populous city in the United Kingdom,
-			with a metropolitan area of over 13 million inhabitants.
-			</p>
-			<p>
-			Standing on the River Thames, London has been a major settlement for two millennia,
-			its history going back to its founding by the Romans, who named it Londinium.
-			</p>
-		</div>
-
-		<div id="footer">
-		Copyright © W3Schools.com
-		</div>
-	</body>
+  <div id="main">
+    <!-- {{ message }} -->
+    <!-- angular templating -->
+		<!-- this is where content will be injected -->
+    <div ng-view></div>
+    
+  </div>
+  
+  <footer class="text-center">
+    <p>View the tutorial on <a href="http://scotch.io/tutorials/javascript/single-page-apps-with-angularjs-routing-and-templating">Scotch.io</a></p>
+  
+    <p>View a tutorial on <a href="http://scotch.io/tutorials/javascript/animating-angularjs-apps-ngview">Animating Your Angular Single Page App</a></p>
+  </footer>
+  
+</body>
 
 </html>
